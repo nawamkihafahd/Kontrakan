@@ -447,6 +447,18 @@ insert  into `penghuni`(`Penghuni_ID`,`Penghuni_Nama`,`Penghuni_Tgllahir`,`Pengh
 ('PH10','Afif Al-Asyad','1998-11-22','L','104','02211640007001','Purwakarta, Jawa Barat','087855873328'),
 ('PH11','Akhmad Nizar Zulmi','1999-02-19','L','104','05111640007001','Mojokerto, Jawa Timur','081216337754');
 
+/* Procedure structure for procedure `sp_allnotakomunal` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_allnotakomunal` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_allnotakomunal`()
+BEGIN
+		SELECT * FROM `nota komunal` a, `penghuni` b, `kategori_komunal` c, `penerima` d WHERE a.`Kategori_ID` = c.`KKomunal_ID` AND a.`Penghuni_ID` = b.`Penghuni_ID` AND a.`Penerima_ID` = d.`Penerima_ID`;
+	END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `sp_lihatbarang` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `sp_lihatbarang` */;
@@ -456,6 +468,30 @@ DELIMITER $$
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_lihatbarang`(p_id varchar(10))
 BEGIN
 		select * from `barang` where `B_ID` = p_id;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_lihatkategorikomunal` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_lihatkategorikomunal` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_lihatkategorikomunal`(p_id varchar(4))
+BEGIN
+		select * from `kategori_komunal` where `KKomunal_ID` = p_id;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_lihatnotakomunal` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_lihatnotakomunal` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_lihatnotakomunal`(p_id varchar(10))
+BEGIN
+		select * from `nota komunal` a, `penghuni` b, `kategori_komunal` c, `penerima` d where a.`Kategori_ID` = c.`KKomunal_ID` and a.`Penghuni_ID` = b.`Penghuni_ID` and a.`Penerima_ID` = d.`Penerima_ID` and a.`NK_ID` = p_id;
 	END */$$
 DELIMITER ;
 
