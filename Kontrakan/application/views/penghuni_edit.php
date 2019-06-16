@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</tr>
 			<tr>
 				<td>Tanggal Lahir</td>
-				<td><input type="text" name="tgllahir" value="<?php echo $d->Penghuni_Tgllahir ?>"></td>
+				<td><input type="date" name="tgllahir" value="<?php echo $d->Penghuni_Tgllahir ?>"></td>
 			</tr>
 			<tr>
 				<td>Jenis Kelamin</td>

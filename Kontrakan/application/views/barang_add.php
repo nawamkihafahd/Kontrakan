@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</tr>
 			<tr>
 				<td>Jumlah</td>
-				<td><input type="text" name="jml"></td>
+				<td><input type="number" name="jml"></td>
 			</tr>
 			<tr>
 				<td>ID Penanggungjawab</td>

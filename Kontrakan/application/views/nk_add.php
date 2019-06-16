@@ -33,11 +33,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</tr>
 			<tr>
 				<td>Nominal</td>
-				<td><input type="text" name="nominal"></td>
+				<td><input type="number" name="nominal"></td>
 			</tr>
 			<tr>
 				<td>Tanggal</td>
-				<td><input type="text" name="tgl"></td>
+				<td><input type="date" name="tgl"></td>
 			</tr>
 			<tr>
 				<td>Periode</td>

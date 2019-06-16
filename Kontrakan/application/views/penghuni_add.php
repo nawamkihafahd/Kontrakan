@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</tr>
 			<tr>
 				<td>Tanggal Lahir</td>
-				<td><input type="text" name="tgllahir"></td>
+				<td><input type="date" name="tgllahir"></td>
 			</tr>
 			<tr>
 				<td>Jenis Kelamin</td>

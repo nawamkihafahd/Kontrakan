@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</tr>
 			<tr>
 				<td>Jumlah</td>
-				<td><input type="text" name="jml" value="<?php echo $d->B_Jumlah ?>"></td>
+				<td><input type="number" name="jml" value="<?php echo $d->B_Jumlah ?>"></td>
 			</tr>
 			<tr>
 				<td>Penanggungjawab</td>

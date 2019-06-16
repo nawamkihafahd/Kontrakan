@@ -23,11 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</tr>
 			<tr>
 				<td>Nominal</td>
-				<td><input type="text" name="nominal" value="<?php echo $d->NI_Nominal ?>"></td>
+				<td><input type="number" name="nominal" value="<?php echo $d->NI_Nominal ?>"></td>
 			</tr>
 			<tr>
 				<td>Tanggal</td>
-				<td><input type="text" name="tgl" value="<?php echo $d->NI_tanggal ?>"></td>
+				<td><input type="date" name="tgl" value="<?php echo $d->NI_tanggal ?>"></td>
 			</tr>
 			<tr>
 				<td>Kategori</td>

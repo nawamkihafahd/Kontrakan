@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</tr>
 			<tr>
 				<td>Nominal</td>
-				<td><input type="text" name="nmnl"></td>
+				<td><input type="number" name="nmnl"></td>
 			</tr>
 			<tr>
 				<td></td>
