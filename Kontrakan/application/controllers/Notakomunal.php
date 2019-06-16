@@ -8,7 +8,7 @@ class Notakomunal extends CI_Controller {
 	}
 	public function index()
 	{
-		redirect( base_url() );
+		$this->load->view('nk_home');
 	}
 	public function nkall()
 	{

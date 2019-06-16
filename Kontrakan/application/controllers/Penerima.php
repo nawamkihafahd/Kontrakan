@@ -8,7 +8,7 @@ class Penerima extends CI_Controller {
 	}
 	public function index()
 	{
-		redirect( base_url() );
+		$this->load->view('penerima_home');
 	}
 	public function Penerimaall()
 	{

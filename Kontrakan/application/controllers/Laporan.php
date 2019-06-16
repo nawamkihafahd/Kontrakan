@@ -8,7 +8,7 @@ class Laporan extends CI_Controller {
 	}
 	public function index()
 	{
-		redirect( base_url() );
+		$this->load->view('laporan_home');
 	}
 	public function brgrsk()
 	{
