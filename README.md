@@ -1,1 +1,4 @@
 # Kontrakan
+
+
+Latihan Dasar Codeigniter
