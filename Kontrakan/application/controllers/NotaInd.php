@@ -8,7 +8,7 @@ class NotaInd extends CI_Controller {
 	}
 	public function index()
 	{
-		redirect( base_url() );
+		$this->load->view('notaind_home');
 	}
 	public function NotaIndall()
 	{
@@ -47,12 +47,13 @@ class NotaInd extends CI_Controller {
 	{
 		$data['list_NotaInd'] = $this->phn->lihatNotaInd($idNotaInd);
 		$this->load->view('notaind_edit', $data);
-	}*/
+	}
 	public function deleteNotaInd($idNotaInd)
 	{
 		$qstatus = $this->phn->deleteNotaInd($idNotaInd);
 		redirect('/NotaInd/NotaIndall/');
 	}
+	*/
 	public function formaddNotaInd()
 	{
 		$this->load->view('notaind_add');

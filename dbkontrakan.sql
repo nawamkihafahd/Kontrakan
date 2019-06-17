@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-DELIMITER $$
-
-USE `sistem kontrakan`$$
-
-DROP PROCEDURE IF EXISTS `sp_lihatNotaInd`$$
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_lihatNotaInd`(p_id VARCHAR (9))
-BEGIN
-		SELECT * FROM `nota_individu` WHERE NI_ID = p_id;
-    END$$
-
-DELIMITER ;
-=======
 /*
 SQLyog Ultimate v12.4.3 (64 bit)
 MySQL - 5.7.20-log : Database - sistem kontrakan
@@ -461,6 +447,18 @@ insert  into `penghuni`(`Penghuni_ID`,`Penghuni_Nama`,`Penghuni_Tgllahir`,`Pengh
 ('PH10','Afif Al-Asyad','1998-11-22','L','104','02211640007001','Purwakarta, Jawa Barat','087855873328'),
 ('PH11','Akhmad Nizar Zulmi','1999-02-19','L','104','05111640007001','Mojokerto, Jawa Timur','081216337754');
 
+/* Procedure structure for procedure `sp_allnotaind` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_allnotaind` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_allnotaind`()
+BEGIN
+		SELECT * FROM `nota individu`;
+	END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `sp_allnotakomunal` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `sp_allnotakomunal` */;
@@ -485,6 +483,18 @@ BEGIN
 	END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `sp_lihatKategoriIndividu` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_lihatKategoriIndividu` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_lihatKategoriIndividu`(p_id varchar(4))
+BEGIN
+		select * from `kategori_individu` where `Kategori_ID` = p_id;
+	END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `sp_lihatkategorikomunal` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `sp_lihatkategorikomunal` */;
@@ -495,6 +505,18 @@ DELIMITER $$
 BEGIN
 		select * from `kategori_komunal` where `KKomunal_ID` = p_id;
 	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_lihatNotaInd` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_lihatNotaInd` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_lihatNotaInd`(p_id VARCHAR (9))
+BEGIN
+		SELECT * FROM `nota individu` WHERE NI_ID = p_id;
+    END */$$
 DELIMITER ;
 
 /* Procedure structure for procedure `sp_lihatnotakomunal` */
@@ -759,4 +781,3 @@ DROP TABLE IF EXISTS `uang yang diterima penghuni`;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
->>>>>>> f5791a370c1e233637b1ba63b321af2aa1300ccc

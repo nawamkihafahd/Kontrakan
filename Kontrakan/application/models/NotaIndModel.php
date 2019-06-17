@@ -8,7 +8,8 @@
 	Public function listall()
 	{
 		
-		$query = $this->db->get('nota_individu');
+		$insert_user_stored_proc = "CALL sp_allnotaind()";
+        $query = $this->db->query($insert_user_stored_proc);
 		return $query->result();
 		
 		/*
@@ -26,11 +27,11 @@
 	public function deleteNotaInd($idNotaInd)
 	{
 		$this->db->where('NI_ID', $idNotaInd);
-		$this->db->delete('nota_individu');
+		$this->db->delete('nota individu');
 	}
 	public function addNotaInd($data)
 	{
-		$sql = "insert into `nota_individu` (NI_ID, Penghuni_ID, NI_Nominal, NI_tanggal, Kategori_ID, ID_Penerima, NI_Periode) values (?, ?, ?, ?, ?, ?, ?)";
+		$sql = "insert into `nota individu` (NI_ID, Penghuni_ID, NI_Nominal, NI_tanggal, Kategori_ID, ID_Penerima, NI_Periode) values (?, ?, ?, ?, ?, ?, ?)";
 		$query = $this->db->query($sql, array($data['NI_ID'], $data['Penghuni_ID'], $data['NI_Nominal'], $data['NI_tanggal'], $data['Kategori_ID'], $data['ID_Penerima'], $data['NI_Periode']));
 	}
 	public function lihatNotaInd($idNotaInd)
